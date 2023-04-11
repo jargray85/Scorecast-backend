@@ -26,6 +26,11 @@ app.use(express.json()) // parse json
 const routes = require('./routes/index')
 app.use('/', routes)
 
+// TEST ROUTE //
+app.get('/hi', (req, res) => {
+    res.send('Hello World')
+})
+
 // CATCH ROUTE //
 app.use((req, res) => {res.status(404).json({message: 'NOT A PROPER ROUTE'})})
 
