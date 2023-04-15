@@ -2,20 +2,26 @@
 const express = require("express")
 const app = express()
 const cors = require("cors")
-// const session = require('express-session')
+const session = require('express-session')
+const mongoose = require('mongoose')
 require("dotenv").config()
+
+// MODELS // 
+const { Users } = require('./models')
 
 
 // // SESSIONS //
-// const SESSION_SECRET = process.env.SESSION_SECRET
-// // console.log(SESSION_SECRET)
-// // SECRET
-// app.use(session({
-//     secret: SESSION_SECRET,
-//     resave: true, 
-//     saveUninitialized: true
-// }))
-// console.log('session secret is ', SESSION_SECRET)
+const SESSION_SECRET = process.env.SESSION_SECRET
+console.log(SESSION_SECRET)
+// SECRET
+app.use(session({
+    secret: SESSION_SECRET,
+    resave: true, 
+    saveUninitialized: true
+}))
+console.log('session secret is ', SESSION_SECRET)
+
+
 
 // MIDDLEWARE //
 app.use(cors()) // prevent cors errors/open access across all origins
