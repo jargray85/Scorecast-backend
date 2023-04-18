@@ -11,15 +11,15 @@ const { Users } = require('./models')
 
 
 // // SESSIONS //
-const SESSION_SECRET = process.env.SESSION_SECRET
-console.log(SESSION_SECRET)
-// SECRET
-app.use(session({
-    secret: SESSION_SECRET,
-    resave: true, 
-    saveUninitialized: true
-}))
-console.log('session secret is ', SESSION_SECRET)
+// const SESSION_SECRET = process.env.SESSION_SECRET
+// console.log(SESSION_SECRET)
+// // SECRET
+// app.use(session({
+//     secret: SESSION_SECRET,
+//     resave: true, 
+//     saveUninitialized: true
+// }))
+// console.log('session secret is ', SESSION_SECRET)
 
 
 
