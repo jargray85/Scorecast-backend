@@ -5,6 +5,7 @@ const { query } = require('express')
 console.log(db)
 const router = express.Router()
 
+
 // AUTH REQUIRED MIDDLEWARE //
 const authRequired = (req, res, next) => {
     if (!req.session.currentUser) {
