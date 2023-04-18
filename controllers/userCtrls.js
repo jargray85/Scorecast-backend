@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt')
 const db = require('../models')
 const { query } = require('express')
 console.log(db)
-const router = express.Router()
+// const router = express.Router()
 
 
 // AUTH REQUIRED MIDDLEWARE //
@@ -133,5 +133,5 @@ module.exports = {
     createUser,
     deleteUser,
     getUser,
-    authRequired
+    // authRequired
 }

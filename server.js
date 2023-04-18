@@ -2,7 +2,7 @@
 const express = require("express")
 const app = express()
 const cors = require("cors")
-const session = require('express-session')
+// const session = require('express-session')
 const mongoose = require('mongoose')
 require("dotenv").config()
 
