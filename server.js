@@ -8,6 +8,7 @@ const auth = require("./middleware/auth");
 // const session = require('express-session')
 require("dotenv").config()
 
+// Hi //
 
 // // SESSIONS //
 // const SESSION_SECRET = process.env.SESSION_SECRET
