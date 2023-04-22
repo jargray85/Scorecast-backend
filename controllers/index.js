@@ -1,3 +1,3 @@
 module.exports = {
-    usersCtrl: require('./userCtrls')
+    userCtrl: require('./userCtrl')
 }

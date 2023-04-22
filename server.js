@@ -2,17 +2,16 @@
 const express = require("express")
 const app = express()
 const cors = require("cors")
-// const session = require('express-session')
-const mongoose = require('mongoose')
-require("dotenv").config()
+const auth = require("./middleware/auth");
 
-// MODELS // 
-const { Users } = require('./models')
+
+// const session = require('express-session')
+require("dotenv").config()
 
 
 // // SESSIONS //
 // const SESSION_SECRET = process.env.SESSION_SECRET
-// console.log(SESSION_SECRET)
+// // console.log(SESSION_SECRET)
 // // SECRET
 // app.use(session({
 //     secret: SESSION_SECRET,
@@ -20,8 +19,6 @@ const { Users } = require('./models')
 //     saveUninitialized: true
 // }))
 // console.log('session secret is ', SESSION_SECRET)
-
-
 
 // MIDDLEWARE //
 app.use(cors()) // prevent cors errors/open access across all origins
@@ -32,13 +29,11 @@ app.use(express.json()) // parse json
 const routes = require('./routes/index')
 app.use('/', routes)
 
-// TEST ROUTE //
-app.get('/hi', (req, res) => {
-    res.send('Hello World')
-})
-
 // CATCH ROUTE //
 app.use((req, res) => {res.status(404).json({message: 'NOT A PROPER ROUTE'})})
+
+
+
 
 // PORT //
 const { PORT } = process.env
