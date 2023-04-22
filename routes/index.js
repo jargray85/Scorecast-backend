@@ -3,6 +3,6 @@ const usersRoute = require('./userRoutes.js') // import route methods
 // const usersRoute = require('./usersRoutes.js')
 
 // URL Directory
-router.use('/', usersRoute)
+router.use('/scorecast', usersRoute)
 
 module.exports = router
